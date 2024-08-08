@@ -1,5 +1,6 @@
 import "./App.css";
 import MainSection from "./components/main/MainSection";
+import RightSide from "./components/rightside/RightSide";
 import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
@@ -11,7 +12,9 @@ function App() {
         <div className="main flex-grow">
           <MainSection/>
         </div>
-        <div className="last"></div>
+        <div className="last">
+          <RightSide/>
+        </div>
       </div>
     </div>
   );
