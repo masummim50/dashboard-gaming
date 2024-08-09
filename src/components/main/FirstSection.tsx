@@ -6,7 +6,7 @@ const FirstSection = () => {
   return (
     <div className="grid grid-cols-3 gap-5">
       <div
-        className={`relative bg-[url('../../../public/cover.jpg')] col-span-3 h-[200px] md:h-auto md:col-span-2 w-full rounded-2xl bg-cover animate-move`}
+        className={`relative bg-[url('/cover.jpg')] col-span-3 h-[200px] md:h-auto md:col-span-2 w-full rounded-2xl bg-cover animate-move`}
       >
         <div className="absolute top-[8px] left-[8px] ">
           <div className="flex gap-1">

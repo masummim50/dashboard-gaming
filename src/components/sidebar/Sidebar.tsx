@@ -57,7 +57,7 @@ const Sidebar = () => {
           return (
             <li
               key={i}
-              className={`hover:bg-gradient-to-r  from-sky-500/10 via-transparent to-transparent px-2 py-1 text-sm ${
+              className={`hover:bg-gradient-to-r cursor-pointer  from-sky-500/10 via-transparent to-transparent px-2 py-1 text-sm ${
                 location.pathname === link.link &&
                 "bg-gradient-to-r  from-sky-500/10 via-transparent to-transparent "
               }`}

@@ -2,6 +2,7 @@ import React from "react";
 import FirstSection from "./FirstSection";
 import SecondSection from "./SecondSection";
 import MyBets from "./MyBets";
+import LastWinners from "../rightside/LastWinners";
 
 
 const MainSection = () => {
@@ -10,6 +11,9 @@ const MainSection = () => {
       <FirstSection/>
       <SecondSection/>
       <MyBets/>
+      <div className="block lg:hidden">
+        <LastWinners/>
+      </div>
     </div>
   );
 };

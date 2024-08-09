@@ -1,60 +1,63 @@
-import React from "react";
-import { BsThreeDots } from "react-icons/bs";
 
-const data = [
-  {
-    name: "Kristopher Gibson",
-    time: "10 min ago",
-    money: 220,
-  },
-  {
-    name: "Dominic Freeman",
-    time: "13 min ago",
-    money: 20,
-  },
-  {
-    name: "Jaylon Hendrix",
-    time: "15 min ago",
-    money: 490,
-  },
-];
+import React, { useEffect } from "react";
+
+import TournamentChat from "./TournamentChat";
+import LastWinners from "./LastWinners";
+
+
 const RightSide = () => {
+
+
+  const [showChat, setShowChat] = React.useState(false);
+  useEffect(() => {
+    // Function to check window size and update showChat
+    const handleResize = () => {
+      if (window.innerWidth > 1024) {
+        setShowChat(true);
+      } else {
+        setShowChat(false);
+      }
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const clickChat = () => {
+    setShowChat(!showChat);
+  };
+
   return (
-    <div className="rounded-2xl bg-gray-900 p-5 hidden lg:block min-w-[250px]">
-      <div className="p-3 bg-gray-800 rounded-2xl ">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center gap-1">
-            <div className="bg-green-400 size-2 rounded-full"></div>
-            <p className="text-sm text-white font-bold">Last Winners</p>
-          </div>
-          <BsThreeDots className="text-gray-500" />
-        </div>
+    <>
+    <div className="lg:block hidden">
 
-        {data.map((p, index) => (
-          <div
-            key={index}
-            className="flex gap-2 items-center mt-4 border-t border-t-gray-600 pt-3"
-          >
-            <img
-              src={`../../../public/streamer${index}.jpg`}
-              className="w-9 rounded-full"
-              alt=""
-            />
-            <div className="flex-grow">
-              <h2 className="text-white text-xs font-bold">{p.name}</h2>
-              <div className="flex justify-between items-center">
-                <div className="text-teal-400 text-xs">+{p.money}$</div>
-                <span className="text-xs text-gray-500">{p.time}</span>
-              </div>
-            </div>
-          </div>
-        ))}
-
-      </div>
-        <button className="mt-3 text-center w-full text-white bg-gradient-to-b from-orange-400 to-orange-700 rounded-2xl py-2  transition-all">
-          Expand List
-        </button>
+      <LastWinners/>
     </div>
+
+      {/* chat */}
+      {/* design for small devices */}
+
+      
+      <div
+        className={`transition-all duration-500  p-4 bg-gray-900/30 lg:bg-gray-900 backdrop-blur-md lg:backdrop-blur-0 rounded-2xl mt-4 text-white  fixed bottom-[40px] origin-bottom-right right-[10px] ${showChat ? 'scale-100' : 'scale-0'}   lg:static lg:block `}
+      >
+        <TournamentChat />
+      </div>
+      <div
+        onClick={clickChat}
+        className="cursor-pointer hover:bg-teal-700 transition-all block lg:hidden fixed bg-teal-400 text-white font-bold rounded-full bottom-0 right-0 m-2 p-2 border border-black"
+      >
+        Chat
+      </div>
+    </>
   );
 };
 
