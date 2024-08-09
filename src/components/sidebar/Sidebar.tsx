@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaFireFlameCurved } from "react-icons/fa6";
 import { IoDiamondSharp } from "react-icons/io5";
 import { AiOutlineStock } from "react-icons/ai";

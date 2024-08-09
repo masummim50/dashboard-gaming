@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BsThreeDots } from 'react-icons/bs';
 import { FaStar } from "react-icons/fa";
 import { FaTrophy } from "react-icons/fa";

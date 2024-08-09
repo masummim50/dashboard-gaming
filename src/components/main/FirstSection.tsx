@@ -1,4 +1,4 @@
-import React from "react";
+
 import { FaApple } from "react-icons/fa";
 import { FaWindows } from "react-icons/fa";
 import TwoSmallCards from "./TwoSmallCards";

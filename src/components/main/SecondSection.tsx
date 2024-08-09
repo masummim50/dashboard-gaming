@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Profile from './Profile';
 import Profits from './Profits';
 
