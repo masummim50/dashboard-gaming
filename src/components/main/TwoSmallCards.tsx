@@ -3,7 +3,7 @@ import BalanceCard from "./BalanceCard";
 
 const TwoSmallCards = () => {
   return (
-    <div className="flex h-full justify-between  flex-col gap-4 min-w-[200px]">
+    <div className="flex h-full justify-between flex-row md:flex-col col-span-3 md:col-span-1 gap-4 min-w-[150px]">
       <div className="bg-gray-800 text-center pb-5 pt-10 px-5 rounded-2xl py-4 relative">
         <p className="text-white font-semibold mb-5">Create Tournament</p>
         <p className="text-gray-500 text-xs">

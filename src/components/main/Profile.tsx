@@ -5,7 +5,7 @@ import { FaTrophy } from "react-icons/fa";
 
 const Profile = () => {
     return (
-        <div className='rounded-2xl bg-gray-800 p-4'>
+        <div className='rounded-2xl bg-gray-800 p-4 col-span-3 md:col-span-1'>
             <div className="flex">
                 <div className="size-[40px] flex items-center justify-center border-gray-900 rounded-md border-2 bg-gradient-to-br from-transparent to-gray-900 rotate-45">
                     <FaStar className='text-orange-500 text-base bg-transparent drop-shadow-[0_0_10px_#f97316]'/>

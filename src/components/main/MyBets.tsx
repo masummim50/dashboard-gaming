@@ -4,9 +4,9 @@ import { BsThreeDots } from 'react-icons/bs';
 
 const bets = [
     {name: 'Madelyn Gibson', time: '10', game: 'Fortnite', profit: 220},
-    {name: 'Jona Hendrix', time: '10', game: 'Fortnite', profit: 220},
-    {name: 'Alison Marshall', time: '10', game: 'Fortnite', profit: 220},
-    {name: 'Peter Smith', time: '10', game: 'Fortnite', profit: 220},
+    {name: 'Jona Hendrix', time: '10', game: 'Fortnite', profit: 260},
+    {name: 'Alison Marshall', time: '10', game: 'Fortnite', profit: 30},
+    {name: 'Peter Smith', time: '10', game: 'Fortnite', profit: 20},
 ]
 
 const MyBets = () => {
@@ -35,7 +35,7 @@ const MyBets = () => {
                                 <td className='rounded-lg p-2 flex gap-2 items-center'><img src={`../../../public/streamer${index}.jpg`} className='w-6 rounded-full' alt="" /> {p.name}</td>
                                 <td>{p.time}</td>
                                 <td>{p.game}</td>
-                                <td>{p.profit}</td>
+                                <td className='text-green-500'>+{p.profit}$</td>
                             </tr>
                         ))
                     }

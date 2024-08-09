@@ -4,7 +4,7 @@ import { FaBolt } from "react-icons/fa6";
 
 const Profits = () => {
   return (
-    <div className="col-span-2 bg-gray-800 p-4 rounded-2xl">
+    <div className="col-span-3 md:col-span-2 bg-gray-800 p-4 rounded-2xl">
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-2">
           <div className=" bg-green-500 rounded-full size-[5px]"></div>

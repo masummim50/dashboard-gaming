@@ -20,8 +20,8 @@ const data = [
 ];
 const RightSide = () => {
   return (
-    <div className="rounded-2xl bg-gray-900 p-5">
-      <div className="p-3 bg-gray-800 rounded-2xl min-w-[200px]">
+    <div className="rounded-2xl bg-gray-900 p-5 hidden lg:block min-w-[250px]">
+      <div className="p-3 bg-gray-800 rounded-2xl ">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-1">
             <div className="bg-green-400 size-2 rounded-full"></div>

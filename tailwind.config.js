@@ -5,7 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        move: {
+          '0%, 100%': { 'background-position': 'left' },
+          '50%': { 'background-position': 'center' },
+        }
+      },
+      animation: {
+        move: 'move 20s ease-in-out infinite',
+      }
+    },
   },
   plugins: [],
 }

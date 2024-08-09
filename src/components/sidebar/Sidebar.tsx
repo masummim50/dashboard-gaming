@@ -9,7 +9,6 @@ import TopStreamer from "./TopStreamer";
 import Activity from "./Activity";
 import { FaSearch } from "react-icons/fa";
 
-
 const links = [
   { title: "Hot", link: "/", icon: <FaFireFlameCurved />, number: 0 },
   { title: "New", link: "/new", icon: <IoDiamondSharp />, number: 1 },
@@ -41,17 +40,16 @@ const Sidebar = () => {
   }, [location.pathname]);
 
   return (
-    <div className="sidebar w-auto bg-gray-900 min-h-[100vh] max-w-[200px] rounded-lg pt-3">
+    <div className="sidebar w-auto bg-gray-900 min-h-[100vh]   rounded-lg pt-3">
       <div className="px-2">
         <div className="relative">
-
-        <input
-          type="text"
-          placeholder="search"
-          className="rounded-lg border border-gray-400 bg-transparent px-2 py-[4px] mb-5 pl-[35px]  min-w-[150px] w-full text-gray-300 relative"
+          <input
+            type="text"
+            placeholder="search"
+            className="rounded-lg border-0 md:border border-gray-400 bg-transparent px-2 py-[4px] mb-5 pl-0 md:pl-[35px]  md:max-w-[200px] w-0 md:w-full text-gray-300 relative "
           />
-        <FaSearch className="absolute top-[10px] left-[10px] z-2 text-gray-400"/>
-          </div>
+          <FaSearch className="absolute top-[10px] left-[10px] z-2 text-gray-400" />
+        </div>
       </div>
       <ul className="relative">
         {/* map the links here */}
@@ -66,7 +64,7 @@ const Sidebar = () => {
             >
               <Link
                 to={link.link}
-                className={` pl-2 pr-6 text-left  w-full inline-block ${
+                className={` pl-2 pr-0 md:pr-6 text-left  w-full inline-block ${
                   location.pathname === link.link
                     ? "text-white"
                     : "text-gray-500"
@@ -81,7 +79,10 @@ const Sidebar = () => {
                 >
                   {link.icon}
                 </span>
+                <span className="hidden md:inline-block">
+
                 {link.title}
+                </span>
               </Link>
             </li>
           );
@@ -93,7 +94,7 @@ const Sidebar = () => {
         ></div>
       </ul>
 
-      <div className="m-3">
+      <div className="m-3 hidden md:block">
         <div className="bg-gray-700 h-[1px] my-3"></div>
 
         <TopStreamer />
@@ -102,7 +103,7 @@ const Sidebar = () => {
         <Activity />
         <div className="bg-gray-700 h-[1px] my-3"></div>
 
-        <p className="text-gray-300 text-sm">
+        <p className="text-gray-300 text-sm max-w-[200px]">
           New Addition to Hearthstone, 'March of the Lich King'
         </p>
 

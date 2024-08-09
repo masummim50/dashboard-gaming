@@ -14,7 +14,7 @@ const TopStreamer = () => {
           .fill(0)
           .map((_, index) => (
             <img
-              className="w-7 rounded-full"
+              className="w-6 lg:w-8 rounded-full"
               src={`../../../public/streamer${index}.jpg`}
               alt=""
             />
